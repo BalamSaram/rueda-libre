@@ -1,0 +1,24 @@
+Se observa:
+
+URL: http://127.0.0.1:5500/index.html
+
+HOST: 127.0.0.1
+
+PUERTO: 55000
+RUTA: /index.html
+
+Request Method: 
+GET
+
+Status Code:
+200 OK
+
+Se concluye una petición exitosa.
+
+Para obtener una respuesta 404:
+Se ingresa un "a href" en el navbar con un enlace que no existe. 
+RUTA: /aaa.html
+
+Request methos: GET
+
+CÓDIGO: 404 Not Found

@@ -5,29 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./css/styles.css">
 
     <meta name="description" content="Sitio web de Rueda Libre: alquiler de bicicletas y recorridos guiados por la ciudad de Medellín.">
     <title>Rueda libre</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-nav">
-            <a class="nav-link" href="./servicios.html">Nuestros servicios</a>
-            <a class="nav-link" href="./formulario.html">Reserva con nosotros</a>
-            <a class="nav-link" href="#encuentranos">Encuéntranos</a>
-        </div>
-    </nav>
-
-    <header class="container-fluid">
-        <h1>Rueda libre | Alquiler de bicicletas en Medellín </h1>
-        <h2>Alquiler de bicicletas y recorridos guiados por Medellín</h2>
+     <header class="site-header">
+        <h1><a href="./index.html">Rueda libre | Alquiler de bicicletas en Medellín</a></h1>
+        <p>Alquiler de bicicletas y recorridos guiados por Medellín</p>
+        <nav class="site-nav" aria-label="Navegación principal">
+                <a class="nav-link" href="./servicios.html">Nuestros servicios</a>
+                <a class="nav-link" href="./formulario.html">Reserva con nosotros</a>
+                <a class="nav-link" href="#encuentranos">Encuéntranos</a>
+            </div>
+        </nav>
     </header>
 
     <main class="container">
-        <section>
+        <section class="hero-grid">
+            <div class="hero-copy">
+                <h2>Alquila una bicicleta y recorre la ciudad!</h2>
+                <p>Conoce la ciudad a tu ritmo, con bicicletas para diferentes tipos de recorrido.</p>
+                <a href="./formulario.html">Reserva tu bici!</a>
+            </div>
+
+            <div class="hero-media">
+                <img src="./img/Biciexhibición.jpeg" alt="Bicicleta disponible para alquilar" class="img-fluid">
+            </div>
+
             <h2>¿Quiénes somos?</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eligendi velit pariatur enim, maxime cum, similique ullam ad ab voluptatem eius debitis accusamus, quidem consequuntur! <a href="#encuentranos">Encuéntranos!</a></p>
             <h3>Conoce los beneficios de alquilar con nosotros!</h3>
@@ -65,6 +74,90 @@
                         <a href="#alquilar" data-bs-toggle="modal" data-bs-target="#alquilar">¿Cómo alquilar?</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuestra flota</h2>
+            
+            <div class="fleet-grid">
+                <article class="fleet-card">
+                    <img src="./img/bi1.jpeg" alt="Bicicleta urbana clásica" class="img-fluid">
+                    <h3>Urbana clásica</h3>
+                    <p>Cómoda y liviana para las ciclorrutas.</p>
+                    <p class="precio">Precio por hora: $10.000</p>
+                    <a href="./formulario.html">Resérvala</a>
+                </article>
+
+                <article class="fleet-grid">
+                    <img src="./img/bi2.jpeg" alt="Bicicleta urbana pplegable" class="img-fluid">
+                    <h3>Urbana plegable</h3>
+                    <p>Se dobla en segundos!! Ideal para combinar con el metro.</p>
+                    <p class="precio">Precio por hora: $12.000</p>
+                    <a href="./formulario.html">Resérvala</a>
+                </article>
+
+                <article class="fleet-card">
+                    <img src="./img/bi3.jpeg" alt="bicicleta montaña trail" class="img-fluid">
+                    <h3>Montaña trail</h3>
+                    <p>Con suspensión delantera y +99 cambios para las subidas.</p>
+                    <p class="precio">Precio por hora: $15.000</p>
+                    <a href="./formulario.html">Resérvala</a>
+                </article>
+
+                <article class="fleet-card">
+                    <img src="./img/bi4.jpeg" alt="bicicleta gravel aventura" class="img-fluid">
+                    <h3>Gravel aventura</h3>
+                    <p>Para rutas mixtas de asfalto y destapado</p>
+                    <p class="precio">Precio por hora: $18.000</p>
+                    <a href="./formulario.html">Resérvala</a>
+                </article>
+
+                <article class="fleet-card">
+                    <img src="./img/bi5.jpeg" alt="bicicleta eléctrica urbana" class="img-fluid">
+                    <h3>Eléctrica urbana</h3>
+                    <p>Cuenta con asistencia eléctrica con 45 km de autonomía</p>
+                    <p class="precio">Precio por hora: $25.000</p>
+                    <a href="./formulario.html">Resérvala</a>
+                </article>
+
+                <article class="fleet-card">
+                    <img src="./img/bi6.jpeg" alt="bicicleta infantil" class="img-fluid">
+                    <h3>Infantil</h3>
+                    <p>Para niños de 6 a 11 años.</p>
+                    <p class="precio">Precio por hora: $8.000</p>
+                    <a href="./formulario.html">Resérvala</a>
+                </article>
+
+                <article class="fleet-card">
+                    <img src="./img/bi7.jpeg" alt="bicicleta tándem para dos personas" class="img-fluid">
+                    <h3>Tándem</h3>
+                    <p>Para dos personas; perfecta para pasear en pareja.</p>
+                    <p class="precio">Precio por hora: $20.000</p>
+                    <a href="./formulario.html">Resérvala.</a>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuestras rutas</h2>
+
+            <div class="rutas-grid">
+                <article class="rutas-card">
+                    <img src="./img/rioparques.jpeg" alt="ruta por parques rio" class="img-fluid">
+                    <h3>Río y parques</h3>
+                    <p>12 km - 2 horas - Nivel fácil</p>
+                </article>
+                <article class="rutas-card">
+                    <img src="./img/sabores.jpeg" alt="ruta sabores de barrio" class="img-fluid">
+                    <h3>Sabores de Barrio</h3>
+                    <p>18 km - 3 horas - Nivel medio</p>
+                </article>
+                <article class="rutas-card">
+                    <img src="./img/palmas.jpeg" alt="ruta reto las palmas" class="img-fluid">
+                    <h3>Reto las palmas</h3>
+                    <p>25 km - 4 horas - Nivel difícil</p>
+                </article>
             </div>
         </section>
     </main>

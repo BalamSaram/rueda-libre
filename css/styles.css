@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --verde-ruta: #1E7A4F;
+    --naranja-pedal: #F39A2B;
+    --azul-noche: #14213D;
+    --crema: #FAF6EF;
+    --gris-asfalto: #5B6470;
+
+    /*tipografíasss*/
+    --fuente-titilos: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
+}
+
+* {
+    font-family: 'Montserrat', 'Open Sans';
+}
+
+body {
+    line-height: 1.5;
+    background-color: var(--crema);
+}
+
+header {
+    background-color: var(--crema);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titilos);
+    font-weight: 700;
+    color: var(--azul-noche);
+}
+
+p {
+    font-family: var(--fuente-texto);
+    font-weight: 400;
+}
+
+.card{
+    box-shadow: 0px 0px 5px var(--gris-asfalto);
+}
