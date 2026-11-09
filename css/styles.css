@@ -8,19 +8,20 @@
     --gris-asfalto: #5B6470;
 
     /*tipografíasss*/
-    --fuente-titilos: 'Montserrat', sans-serif;
-    --fuente-texto: 'Open Sans', sans-serif;
+    --fuente-titulos: 'Montserrat';
+    --fuente-texto: 'Open Sans';
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Montserrat', 'Open Sans';
 }
 
 body {
     margin: 0;
     line-height: 1.5;
+    font-family: var(--fuente-texto);
     background-color: var(--crema);
+    color: var(--azul-noche);
 }
 
 img {
@@ -34,7 +35,9 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding-block: 1rem;
+    padding: 1rem clamp(1rem, 4vw, 3rem);
+    background-color: var(--azul-noche);
+    color: var(--crema);
 }
 
 .marca {
@@ -43,19 +46,66 @@ img {
     text-decoration: none; /*Este le quita el subrayado al título de rueda libre*/
 }
 
-header {
-    background-color: var(--crema);
+.site-header h1,
+.site-header p {
+    margin: 0;
+    color: var(--crema);
+}
+
+.site-header h1 {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.site-header a {
+    color: var(--crema);
+}
+
+.site-header h1 a {
+    text-decoration: none;
+}
+
+.site-header .nav-link {
+    border-radius: 0.35rem;
+    padding: 0.4rem 0.65rem;
+    text-decoration: none;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus-visible {
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--fuente-titilos);
+    font-family: var(--fuente-titulos);
     font-weight: 700;
     color: var(--azul-noche);
 }
 
-p, ul, ol {
+p, ul, ol, label, input, select, textarea, button {
     font-family: var(--fuente-texto);
-    font-weight: 400;
+}
+
+main p {
+    color: var(--gris-asfalto);
+}
+
+a {
+    color: var(--verde-ruta);
+    text-underline-offset: 0.15em;
+}
+
+a:hover {
+    color: var(--azul-noche);
+}
+
+:focus-visible {
+    outline: 3px solid var(--verde-ruta);
+    outline-offset: 3px;
+}
+
+.site-header :focus-visible {
+    outline-color: var(--naranja-pedal);
 }
 
 .site-nav {
@@ -80,12 +130,56 @@ p, ul, ol {
     grid-template-columns: 1fr;
     gap:1.5rem;
 }
+
+.hero-grid > :nth-child(n + 3) {
+    grid-column: 1 / -1;
+}
+
 .hero-copy {
     align-self: center;
 }
 
 .card{
+    border-color: var(--gris-asfalto);
+    background-color: var(--crema);
+    color: var(--azul-noche);
     box-shadow: 0px 0px 5px var(--gris-asfalto);
+}
+
+.btn-primary,
+button[type="submit"] {
+    border: 1px solid var(--verde-ruta);
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+    border-color: var(--azul-noche);
+    background-color: var(--azul-noche);
+    color: var(--crema);
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+button[type="submit"]:active,
+button[type="submit"]:focus {
+    border-color: var(--azul-noche);
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    box-shadow: none;
+}
+
+.btn-secondary {
+    border-color: var(--naranja-pedal);
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+}
+
+.btn-secondary:hover {
+    border-color: var(--azul-noche);
+    background-color: var(--azul-noche);
+    color: var(--crema);
 }
 
 /*Flota de bicis*/
@@ -103,6 +197,8 @@ p, ul, ol {
     min-width:0;
     padding:1rem;
     border: 1px solid var(--gris-asfalto);
+    background-color: var(--crema);
+    color: var(--azul-noche);
     box-shadow: 0px 0px 5px var(--gris-asfalto);
     border-radius: 0.75rem;
 }
@@ -116,11 +212,21 @@ p, ul, ol {
 
 .fleet-card .precio {
     font-weight: 700;
+    color: var(--azul-noche);
 }
 
 .fleet-card .linkreserva {
     margin-top: auto;
     align-self: flex-start;
+    border-radius: 0.35rem;
+    padding: 0.45rem 0.75rem;
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+    text-decoration: none;
+}
+
+.fleet-card .linkreserva:hover {
+    background-color: var(--azul-noche);
 }
 
 /*Decoración de rutas. */
@@ -134,6 +240,8 @@ p, ul, ol {
     min-width: 0;
     padding: 1rem;
     border: 1px solid var(--gris-asfalto);
+    background-color: var(--crema);
+    color: var(--azul-noche);
     box-shadow: 0px 0px 4px var(--gris-asfalto);
     border-radius: 0.5rem;
 }
@@ -158,10 +266,24 @@ p, ul, ol {
     min-width:0;
 }
 
-.campo input, .campo select {
+.campo input:not([type="checkbox"]), .campo select {
     width: 100%;
     max-width: 100%;
     padding: 0.6rem;
+    border: 1px solid var(--gris-asfalto);
+    border-radius: 0.35rem;
+    background-color: var(--crema);
+    color: var(--azul-noche);
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--verde-ruta);
+    outline-color: var(--verde-ruta);
+}
+
+.campo input[type="checkbox"] {
+    accent-color: var(--verde-ruta);
 }
 
 .form-row-short {
@@ -173,6 +295,8 @@ p, ul, ol {
 .contact-panel {
     padding:1rem;
     border: 1px solid var(--gris-asfalto);
+    background-color: var(--crema);
+    color: var(--azul-noche);
     box-shadow: 0px 0px 6px var(--gris-asfalto);
     border-radius: 0.75rem;
 }
@@ -182,6 +306,25 @@ p, ul, ol {
     max-width: 100%;
     border: 1px solid var(--gris-asfalto);
     border-radius: 0.75rem;
+    background-color: var(--crema);
+}
+
+.table {
+    --bs-table-color: var(--azul-noche);
+    --bs-table-bg: var(--crema);
+    --bs-table-border-color: var(--gris-asfalto);
+    --bs-table-striped-color: var(--azul-noche);
+    --bs-table-striped-bg: var(--crema);
+    --bs-table-hover-color: var(--azul-noche);
+    --bs-table-hover-bg: var(--naranja-pedal);
+    color: var(--azul-noche);
+    font-family: var(--fuente-texto);
+}
+
+.table-primary {
+    --bs-table-color: var(--crema);
+    --bs-table-bg: var(--azul-noche);
+    --bs-table-border-color: var(--gris-asfalto);
 }
 
 .compact-table {
@@ -192,6 +335,34 @@ p, ul, ol {
 .compact-table th, .compact-table td {
     padding: 0.4rem 0.25rem;
     overflow-wrap: anywhere;
+}
+
+body > footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem clamp(1rem, 4vw, 3rem);
+    background-color: var(--azul-noche);
+    color: var(--crema);
+}
+
+body > footer h2,
+body > footer p {
+    color: var(--crema);
+}
+
+body > footer h2 {
+    font-size: 1.1rem;
+}
+
+body > footer a {
+    color: var(--crema);
+}
+
+body > footer a:hover,
+body > footer a:focus-visible {
+    color: var(--naranja-pedal);
 }
 
 /* EncabezadOOOo y piEEESSss*/
@@ -206,15 +377,14 @@ p, ul, ol {
         justify-content: flex-end;
     }
 
-    .site-footer {
-        display:flex;
+    body > footer:has(> section) {
         flex-direction: row;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: flex-start;
-        gap:1.5rem;
+        gap: 1.5rem;
     }
 
-    .footer-block {
+    body > footer:has(> section) > section {
         flex: 1;
     }
 
@@ -230,5 +400,16 @@ p, ul, ol {
     .form-row-short {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1200px) {
+    .rutas-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .layout-reserva {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
     }
 }
