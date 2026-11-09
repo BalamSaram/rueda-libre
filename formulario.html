@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <meta name="description"
+        content="Sitio web de Rueda Libre: alquiler de bicicletas y recorridos guiados por la ciudad de Medellín.">
+    <title>Rueda libre</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-nav">
+            <a class="nav-link" href="./servicios.html">Nuestros servicios</a>
+            <a class="nav-link" href="#encuentranos">Encuéntranos</a>
+            <a class="nav-link" href="./index.html">Volver a inicio</a>
+        </div>
+    </nav>
+
+    <header class="container-fluid">
+        <h1>Rueda libre | Alquiler de bicicletas en Medellín </h1>
+        <h2>Alquiler de bicicletas y recorridos guiados por Medellín</h2>
+    </header>
+
+    <main class="container m-4">
+        <form action="" class="formulario-reserva">
+            <div class="card">
+                <h3>Datos personales</h3>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="email">Correo:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="tel">Teléfono celular:</label>
+                <input type="tel" id="tel" name="telefono" required>
+            </div>
+            <div class="card">
+                <h3>Fecha y hora</h3>
+                <label for="date">Fecha:</label>
+                <input type="date" name="date" id="date">
+                <label for="hora">Hora:</label>
+                <input type="time" name="hora" id="hora">
+                <p>Ten en cuenta nuestro horario de atención:</p>
+                <p class="phor">Martes a Sábados:</p>
+                <p class="phr">10:00am - 7:00pm</p>
+                <p class="phor">Lunes, domingos y festivos</p>
+                <p class="phr">8:00am - 8:00pm</p>
+            </div>
+        </form>
+    </main>
+
+    <footer class="container-fluid mb-4 justify-content-center">
+        <h2 id="encuentranos">Encuéntranos en: </h2>
+        <p><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hola@ruedalibre.example" class="btn-email"
+                target="_blank">Escríbenos</a></p>
+        <p><i class="bi bi-telephone" aria-hidden="true"></i><a href="https://wa.me/3001231212" class="btn-whatsapp"
+                target="_blank">Chatea con nosotros</a>
+        <p><i class="bi bi-geo-alt" aria-hidden="true"><a href="https://maps.app.goo.gl/V3AMHP2AkMKPGD196"
+                    target="_blank">Medellín,
+                    Colombia</a></i></p>
+    </footer>
+</body>
+
+</html>
