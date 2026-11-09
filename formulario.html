@@ -28,65 +28,76 @@
     <main class="container m-4">
         <section class="layout-reserva">
             <form class="formulario-reserva">
-                <div class="card m-3">
-                    <h2>Datos de la reserva</h2>
+                <h2>Datos de la reserva</h2>
 
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" minlength="2" maxlength="60" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-row-short">
                     <div class="campo">
-                        <h3>Datos personales</h3>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" required>
+                        <label for="documento">Documento (debe incluir de 6 a 10 dígitos)</label>
+                        <input type="text" id="documento" name="documento" inputmode="numeric" minlength="6"
+                            maxlength="10" pattern="[0-9]{6,10}"
+                            title="Escribe entre 6 y 10 digitos, sin puntos ni espacios."
+                            aria-describedby="ayuda-documento" required>
                     </div>
 
                     <div class="campo">
-                        <label for="email">Correo:</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-
-                    <div class="form-row-short">
-                        <div class="campo">
-                            <label for="documento">Documento</label>
-                            <input type="text" id="documento" name="documento" required>
-                        </div>
-
-                        <div class="campo">
-                            <label for="tel">Teléfono celular:</label>
-                            <input type="tel" id="tel" name="telefono" required>
-                        </div>
-                    </div>
-
-                    <div class="campo">
-                        <label for="date">Fecha:</label>
-                        <input type="date" name="date" id="date">
-                        <label for="hora">Hora:</label>
-                        <input type="time" name="hora" id="hora">
-                    </div>
-
-                    <div class="campo">
-                        <h3>Recorrido</h3>
-                        <label for="recorrido">Recorrido:</label>
-                        <select id="recorrido" name="recorrido" required>
-                            <option value="" disabled selected>Selecciona uno </option>
-                            <option value="rioparques">Río y parques</option>
-                            <option value="barrio">Sabores de barrio</option>
-                            <option value="palmas">Reto Las Palmas</option>
-                        </select>
-                    </div>
-                    <div class="campo">
-                        <h3>Bicicleta</h3>
-                        <label for="bicicleta">Selecciona el tipo de bicicleta:</label>
-                        <select name="bicicleta" id="bicicleta" required>
-                            <option value="">Selecciona una...</option>
-                            <option value="urbana">Urbana</option>
-                            <option value="montaña">Montaña</option>
-                            <option value="electrica">Eléctrica</option>
-                        </select>
+                        <label for="tel">Teléfono celular:</label>
+                        <input type="tel" id="tel" name="telefono" inputmode="numeric" minlength="10" maxlength="10"
+                            pattern="3[0-9]{9}" title="Escribe 10 digitos y comienza por 3" required>
                     </div>
                 </div>
 
+                <div class="campo">
+                    <label for="date">Fecha:</label>
+                    <input type="date" name="date" id="date" required>
+                    <label for="hora">Hora:</label>
+                    <input type="time" name="hora" id="hora" required>
+                </div>
+
+                <div class="campo">
+                    <h3>Recorrido</h3>
+                    <label for="recorrido">Recorrido:</label>
+                    <select id="recorrido" name="recorrido" required>
+                        <option value="" disabled selected>Selecciona uno </option>
+                        <option value="rioparques">Río y parques</option>
+                        <option value="barrio">Sabores de barrio</option>
+                        <option value="palmas">Reto Las Palmas</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="cantidad">Cantidad de bicicletas (1 a 6):</label>
+                    <input type="number" name="cantidad" id="cantidad" min="1" max="6" step="1" required>
+                </div>
+                <div class="campo">
+                    <h3>Bicicleta</h3>
+                    <label for="bicicleta">Selecciona el tipo de bicicleta:</label>
+                    <select name="bicicleta" id="bicicleta" required>
+                        <option value="">Selecciona una...</option>
+                        <option value="urbana">Urbana</option>
+                        <option value="montaña">Montaña</option>
+                        <option value="electrica">Eléctrica</option>
+                    </select>
+                </div>
+                </div>
+
                 <div class="card m-3">
-                    <h3>Observaciones</h3>
+                    <h3>Observaciones (Opcional):</h3>
                     <label for="observaciones">¿Tienes alguna observación?</label>
-                    <input type="text" id="observaciones" name="observaciones">
+                    <input type="text" id="observaciones" name="observaciones" maxlength="300">
+                </div>
+
+                <div class="campo">
+                    <input type="checkbox" id="confirmacion" name="confirmacion" required>
+                    <label for="confirmacion">Confirmo que revisé los datos de la reserva.</label>
                 </div>
 
                 <button class="btn bnt-primary" type="submit">Reservar</button>

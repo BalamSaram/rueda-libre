@@ -22,3 +22,24 @@ RUTA: /aaa.html
 Request methos: GET
 
 CÓDIGO: 404 Not Found
+
+
+Pruebas responsive
+
+Flota:
+- 1280 px: ____ columnas
+- 900 px: ____ columnas
+- 500 px: ____ columnas
+
+Anchos de revisión:
+- 360 px: problemas encontrados y solución: ____________________
+- 768 px: problemas encontrados y solución: ____________________
+- 1280 px: problemas encontrados y solución: ____________________
+
+Decisiones de layout:
+- Portada — Grid: dos dimensiones (filas y columnas); permite dos columnas y centrar el texto.
+- Galería de rutas — Grid: organiza varias tarjetas en columnas y filas.
+- Reservas — Grid: distribuye formulario e información en proporción 2:1.
+- Documento y celular — Flexbox: coloca dos campos en una fila y permite que se apilen.
+- Encabezado — Flexbox: alinea nombre y menú en una dimensión; el menú puede envolver enlaces.
+- Pie — Flexbox: alinea los tres bloques en una fila y los coloca arriba.
