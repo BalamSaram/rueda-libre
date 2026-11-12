@@ -125,17 +125,17 @@ a:hover {
     padding-block: 1rem 2rem;
 }
 
-.hero-grid {
+.hero-ppal {
     display:grid;
     grid-template-columns: 1fr;
     gap:1.5rem;
 }
 
-.hero-grid > :nth-child(n + 3) {
+.hero-ppal > :nth-child(n + 3) {
     grid-column: 1 / -1;
 }
 
-.hero-copy {
+.hero-form {
     align-self: center;
 }
 
@@ -160,7 +160,7 @@ button[type="submit"]:hover {
     color: var(--crema);
 }
 
-.btn-primary:active,
+/*.btn-primary:active,
 .btn-primary:focus,
 button[type="submit"]:active,
 button[type="submit"]:focus {
@@ -168,7 +168,7 @@ button[type="submit"]:focus {
     background-color: var(--azul-noche);
     color: var(--crema);
     box-shadow: none;
-}
+}*/
 
 .btn-secondary {
     border-color: var(--naranja-pedal);
@@ -184,13 +184,13 @@ button[type="submit"]:focus {
 
 /*Flota de bicis*/
 
-.fleet-grid {
+.flota-ppal {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
     gap: 1rem;
 }
 
-.fleet-card {
+.flota-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -203,19 +203,19 @@ button[type="submit"]:focus {
     border-radius: 0.75rem;
 }
 
-.fleet-card img {
+.flota-card img {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 0.5rem;
 }
 
-.fleet-card .precio {
+.flota-card .precio {
     font-weight: 700;
     color: var(--azul-noche);
 }
 
-.fleet-card .linkreserva {
+.flota-card .linkreserva {
     margin-top: auto;
     align-self: flex-start;
     border-radius: 0.35rem;
@@ -225,12 +225,12 @@ button[type="submit"]:focus {
     text-decoration: none;
 }
 
-.fleet-card .linkreserva:hover {
+.flota-card .linkreserva:hover {
     background-color: var(--azul-noche);
 }
 
 /*Decoración de rutas. */
-.rutas-grid {
+.rutas-ppal {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -337,7 +337,7 @@ button[type="submit"]:focus {
     overflow-wrap: anywhere;
 }
 
-body > footer {
+/*body > footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -363,10 +363,10 @@ body > footer a {
 body > footer a:hover,
 body > footer a:focus-visible {
     color: var(--naranja-pedal);
-}
+}*/
 
 /* EncabezadOOOo y piEEESSss*/
-@media (min-width:768px){
+/*@media (min-width:768px){
     .site-header {
         flex-direction: row;
         justify-content: space-between;
@@ -388,7 +388,7 @@ body > footer a:focus-visible {
         flex: 1;
     }
 
-    .hero-grid {
+    .hero-ppal {
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
@@ -403,7 +403,7 @@ body > footer a:focus-visible {
     }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .rutas-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -412,4 +412,4 @@ body > footer a:focus-visible {
         grid-template-columns: 2fr 1fr;
         align-items: start;
     }
-}
+}*/
