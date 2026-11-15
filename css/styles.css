@@ -24,20 +24,136 @@ body {
     color: var(--azul-noche);
 }
 
+section {
+    margin: 2rem 0 0 2rem;
+}
+
 img {
     display:block;
     max-width: 100%;
     height:auto;
 }
 
-.site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#carousel .carousel-item img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin: 1rem 0 0 2rem;
+}
+
+#carousel .carousel-item::after{ /*--Este estilo otorga un efecto visual al final de cada carrusel item*/
+    content:"";
+    position: absolute; /*Si tuviera posición relativa no se vería el degradado */
+    z-index:1;
+    inset:0; /*este atributo hace el elemento ocupe todo el área que lo contiene*/
+    background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--crema)80%, transparent) 0%,
+        color-mix(in srgb, var(--crema)50%, transparent) 43%,
+        transparent 100%
+    );
+}
+
+#carousel .hero-contenido {
+    position:absolute;
+    z-index:2;
+    top:50%;
+    left:6%;
+    width: min(80%, 32rem);
+    transform: translateY(-50%);
+}
+
+#carousel .hero-contenido .minititulo {
+    font-weight: 700px;
+    background-color: var(--naranja-pedal);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    border-radius: 1.5rem;
+    position:relative;
+    z-index:2;
+    top:5px;
+    width: min(30%, 50rem);
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-align: center;
+    transform: translateY(-100%);
+    color: var(--azul-noche);
+}
+
+#carousel .hero-contenido h2{
+    font-weight: 200px;
+    position:relative;
+    z-index:2;
+    top: 20px;
+    width: min(80%, 32rem);
+    transform: translateY(-25%);
+    color: var(--texto-titulos);
+    margin-bottom: min(5%, 15rem);
+}
+
+#carousel .hero-contenido p {
+    font-weight: 200px;
+    position:relative;
+    z-index:2;
+    top: 20px;
+    width: min(80%, 32rem);
+    transform: translateY(-50%);
+    color: var(--color-neutro);
+}
+
+#carousel .hero-contenido a {
+    text-decoration: none;
+    font-weight: 777px;
+    position:relative;
+    z-index:2;
+    top: 20px;
+    left: 10%;
+    /*width: min(80%, 32rem);*/
+    transition: 1s;
+    width: auto;
+    font-weight: bold;
+    transform: translateY(-80%);
+    transform: translateX(-20%);
+    color: var(--color-neutro);
+}
+
+#carousel .hero-contenido a:hover {
+    text-decoration: none;
+    padding: 0.5rem;
+    font-weight: 888px;
+    position:relative;
+    z-index: 2;
+    top: 20px;
+    left: 10%;
+    width: auto;
+    transform: translateY(-80%);
+    transform: translateX(-20%);
+    color: var(--azul-noche);
+    font-weight: bold;
+    background-color: var(--crema);
+    transition: 1s;
+    border-radius: 999px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+.minititulo {
+    display: inline-block;
+    color: var(--azul-noche);
+    background-color: var(--naranja-pedal);
+}
+
+.header {
+    display: block;
+    padding: 1rem clamp(1rem, 4vw, 3rem);
     gap: 1rem;
     padding: 1rem clamp(1rem, 4vw, 3rem);
-    background-color: var(--azul-noche);
+    background-color: var(--verde-ruta);
     color: var(--crema);
+    gap: 3rem;
 }
 
 .marca {
@@ -46,40 +162,55 @@ img {
     text-decoration: none; /*Este le quita el subrayado al título de rueda libre*/
 }
 
-.site-header h1,
-.site-header p {
+.header li:hover {
+    background-color: var(--naranja-pedal);
+    font-weight: bold;
+    border-radius: 5rem;
+    transition: 1s;
+}
+
+.header h1,
+.header p {
     margin: 0;
     color: var(--crema);
 }
 
-.site-header h1 {
+.header h1 {
     font-size: clamp(1.25rem, 2vw, 1.75rem);
 }
 
-.site-header a {
+.header a {
     color: var(--crema);
 }
 
-.site-header h1 a {
+.header h1 a {
     text-decoration: none;
 }
 
-.site-header .nav-link {
+.header .nav-item {
     border-radius: 0.35rem;
     padding: 0.4rem 0.65rem;
     text-decoration: none;
 }
 
-.site-header .nav-link:hover,
-.site-header .nav-link:focus-visible {
-    background-color: var(--naranja-pedal);
-    color: var(--azul-noche);
+.header .navbar-toggler-icon {
+    color: var(--crema);
+    border: none;
+    transition: 1s;
+}
+
+.header .navbar-toggler-icon:hover {
+    color: var(--crema);
+    box-shadow: 0 0 0.5rem 0.6rem;
+    border-radius: 0.3rem;
+    transition: 1s;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
     font-weight: 700;
     color: var(--azul-noche);
+    transition: 1s;
 }
 
 p, ul, ol, label, input, select, textarea, button {
@@ -93,10 +224,15 @@ main p {
 a {
     color: var(--verde-ruta);
     text-underline-offset: 0.15em;
+    margin-top: auto;
 }
 
 a:hover {
     color: var(--azul-noche);
+    background-color: var(--naranja-pedal);
+    border-radius: 5rem;
+    transition: 1s;
+    padding: 0.5rem;
 }
 
 :focus-visible {
@@ -104,20 +240,20 @@ a:hover {
     outline-offset: 3px;
 }
 
-.site-header :focus-visible {
+.header :focus-visible {
     outline-color: var(--naranja-pedal);
 }
 
-.site-nav {
+/*.navbar {
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem 1rem;
-}
+}*/
 
-.content-section {
+.contenido {
     margin-block: 2rem;
 }
 
@@ -140,10 +276,11 @@ a:hover {
 }
 
 .card{
-    border-color: var(--gris-asfalto);
+    border-color: none;
     background-color: var(--crema);
     color: var(--azul-noche);
     box-shadow: 0px 0px 5px var(--gris-asfalto);
+    height: 500px;
 }
 
 .btn-primary,
@@ -367,13 +504,13 @@ body > footer a:focus-visible {
 
 /* EncabezadOOOo y piEEESSss*/
 /*@media (min-width:768px){
-    .site-header {
+    .header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .site-nav {
+    .nav {
         justify-content: flex-end;
     }
 
