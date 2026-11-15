@@ -48,3 +48,4 @@ FORMULARIO CON VALIDACIÓN.
 
 El html del formulario ya cuenta con validación nativa del navegador, pero se implementará Javascript para que se impida el envío y señale los campos inválidos según ciertos requerimientos como extensión de contraseña, restricción de ciertos caracteres, etc.
 
+La fila 150 del archivo formulario.html busca en el documento el elemento que tiene el id=date y lo guarda en la constante creada "fecha"

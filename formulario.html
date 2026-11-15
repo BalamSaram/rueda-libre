@@ -15,7 +15,7 @@
 
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg"><!--Qué hace un data-bs-theme="dark"???????????? REVISAR DESPUÉS-->
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand brand" href="./index.html">
                     Rueda libre | Alquiler de bicicletas en Medellín
@@ -137,11 +137,11 @@
 
     <footer class="container-fluid mb-4 justify-content-center">
         <h2 id="encuentranos">Encuéntranos en: </h2>
-        <p><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hola@ruedalibre.example" class="btn-email"
+        <p><i class="bi bi-envelope"></i><a href="mailto:hola@ruedalibre.example" class="btn-email"
                 target="_blank">Escríbenos</a></p>
-        <p><i class="bi bi-telephone" aria-hidden="true"></i><a href="https://wa.me/3001231212" class="btn-whatsapp"
+        <p><i class="bi bi-telephone"></i><a href="https://wa.me/3001231212" class="btn-whatsapp"
                 target="_blank">Chatea con nosotros</a>
-        <p><i class="bi bi-geo-alt" aria-hidden="true"><a href="https://maps.app.goo.gl/V3AMHP2AkMKPGD196"
+        <p><i class="bi bi-geo-alt"><a href="https://maps.app.goo.gl/V3AMHP2AkMKPGD196"
                     target="_blank">Medellín,
                     Colombia</a></i></p>
     </footer>
@@ -151,6 +151,18 @@
         const hoy = new Date();
         hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
         fecha.min = hoy.toISOString().slice (0,10);
+    </script>
+
+    <script>
+        const nombre= document.querySelector('#nombre');
+
+        nombre.addEventListener('input', () => {
+            nombre.setCustomValidity (
+                nombre.value.trim().length < 2
+                ? 'Ingrese un nombre de al menos 2 caracteres.'
+                : ''
+            );
+        });
     </script>
 </body>
 
