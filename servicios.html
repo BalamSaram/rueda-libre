@@ -12,12 +12,32 @@
 </head>
 <body>
     <header class="header">
-        <h1><a href="./index.html">Rueda libre | Alquiler de bicicletas en Medellín</a></h1>
-        <p>Alquiler de bicicletas y recorridos guiados por Medellín</p>
-        <nav class="navbar">
-                <a class="nav-link" href="./index.html">Volver a inicio</a>
-                <a class="nav-link" href="./formulario.html">Reserva con nosotros</a>
-                <a class="nav-link" href="#encuentranos">Encuéntranos</a>
+        <nav class="navbar navbar-expand-lg"><!--Qué hace un data-bs-theme="dark"???????????? REVISAR DESPUÉS-->
+            <div class="container">
+                <a class="navbar-brand brand" href="./index.html">
+                    Rueda libre | Alquiler de bicicletas en Medellín
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion-principal">
+                    <span class="navbar-toggler-icon"></span><!--ICONITO DE NAVBAR-->
+                </button>
+
+                <div class="collapse navbar-collapse" id="navegacion-principal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <!--<li class="nav-item">
+                            <a href="#inicio" class="btn btn-sm">Inicio</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="./servicios.html" class="btn btn-sm">Nuestros servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./formulario.html" class="btn btn-sm">Reserva con nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#encuentranos" class="btn btn-sm">Encuéntranos</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
