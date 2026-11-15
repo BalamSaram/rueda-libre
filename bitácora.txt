@@ -43,3 +43,8 @@ Decisiones de layout:
 - Documento y celular — Flexbox: coloca dos campos en una fila y permite que se apilen.
 - Encabezado — Flexbox: alinea nombre y menú en una dimensión; el menú puede envolver enlaces.
 - Pie — Flexbox: alinea los tres bloques en una fila y los coloca arriba.
+
+FORMULARIO CON VALIDACIÓN.
+
+El html del formulario ya cuenta con validación nativa del navegador, pero se implementará Javascript para que se impida el envío y señale los campos inválidos según ciertos requerimientos como extensión de contraseña, restricción de ciertos caracteres, etc.
+
