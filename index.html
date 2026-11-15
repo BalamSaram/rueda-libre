@@ -26,7 +26,55 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container"><section class="container seccion-ppal" id="inicio">
+            <div id="carousel" data-bs-ride="carousel" class="carousel slide carousel-fade">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Primera imagen"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="imagen 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+                    
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/Biciexhibición.jpeg" alt="bicicleta en exhibición" class="d-block w-100">
+                        <div class="hero-contenido">
+                            <span class="minititulo">Alquila una bicicleta y recorre la ciudad!</span>
+                            <p>Tertulias, análisis de clásicos y encuentros abiertos para compartir lecturas.</p>
+                            <a href="./formulario.html">Reserva tu bici!</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Alquiler.jpeg" alt="imagen de alquiler" class="d-block w-100">
+                        <div class="hero-contenido">
+                            <span class="minititulo">Quiénes somos?</span>
+                            <h2></h2>
+                            <p>Un espacio acogedor con recursos y servicios para toda la comunidad.</p>
+                            <a
+                    href="#encuentranos">Encuéntranos!</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carrusel-i3.jpeg" alt="Libros y una taza en una mesa de lectura" class="d-block w-100">
+                        <div class="hero-contenido">
+                            <span class="minititulo">Narrativa y ficción</span>
+                            <h2>Grandes historias para soñar en voz alta.</h2>
+                            <p>Nuevas adquisiciones literarias de autores nacionales e internacionales</p>
+                            <a href="#recomendaciones" class="btn primary-button">Ver colección de ficción</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <!--si este span no se escribe tal cual, no aparecerán las flechitas de control para pasar la diapositiva.-->
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <!--los data-bs-target es lo que apunta a un parámetro u otro, por ejemplo, wn este caso estamos en la sección que genera el carrusel, al principio de la sección está el parámetro data-bs-RIDE con el atributo de carousel, los data-bs-target hacen como un href cuando se le pone el # y lo refieren al ride que funciona como un id de lo que se está haciendo, idk jekj-->
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   
+                </button>
+            </div>
         <section class="hero-ppal">
             <div class="hero-form">
                 <h2>Alquila una bicicleta y recorre la ciudad!</h2>
@@ -90,8 +138,8 @@
         <section>
             <h2>Nuestra flota</h2>
 
-            <div class="fleet-grid">
-                <article class="fleet-card">
+            <div class="flota-ppal">
+                <article class="flota-card">
                     <img src="./img/bi1.jpeg" alt="Bicicleta urbana clásica" class="img-fluid">
                     <h3>Urbana clásica</h3>
                     <p>Cómoda y liviana para las ciclorrutas.</p>
@@ -99,7 +147,7 @@
                     <a class="linkreserva" href="./formulario.html">Resérvala</a>
                 </article>
 
-                <article class="fleet-card">
+                <article class="flota-card">
                     <img src="./img/bi2.jpeg" alt="Bicicleta urbana pplegable" class="img-fluid">
                     <h3>Urbana plegable</h3>
                     <p>Se dobla en segundos!! Ideal para combinar con el metro.</p>
@@ -107,7 +155,7 @@
                     <a class="linkreserva" href="./formulario.html">Resérvala</a>
                 </article>
 
-                <article class="fleet-card">
+                <article class="flota-card">
                     <img src="./img/bi3.jpeg" alt="bicicleta montaña trail" class="img-fluid">
                     <h3>Montaña trail</h3>
                     <p>Con suspensión delantera y +99 cambios para las subidas.</p>
@@ -115,7 +163,7 @@
                     <a class="linkreserva" href="./formulario.html">Resérvala</a>
                 </article>
 
-                <article class="fleet-card">
+                <article class="flota-card">
                     <img src="./img/bi4.jpeg" alt="bicicleta gravel aventura" class="img-fluid">
                     <h3>Gravel aventura</h3>
                     <p>Para rutas mixtas de asfalto y destapado</p>
@@ -123,7 +171,7 @@
                     <a class="linkreserva" href="./formulario.html">Resérvala</a>
                 </article>
 
-                <article class="fleet-card">
+                <article class="flota-card">
                     <img src="./img/bi5.jpeg" alt="bicicleta eléctrica urbana" class="img-fluid">
                     <h3>Eléctrica urbana</h3>
                     <p>Cuenta con asistencia eléctrica con 45 km de autonomía</p>
@@ -131,7 +179,7 @@
                     <a class="linkreserva" href="./formulario.html">Resérvala</a>
                 </article>
 
-                <article class="fleet-card">
+                <article class="flota-card">
                     <img src="./img/bi6.jpeg" alt="bicicleta infantil" class="img-fluid">
                     <h3>Infantil</h3>
                     <p>Para niños de 6 a 11 años.</p>
@@ -139,7 +187,7 @@
                     <a class="linkreserva" href="./formulario.html">Resérvala</a>
                 </article>
 
-                <article class="fleet-card">
+                <article class="flota-card">
                     <img src="./img/bi7.jpeg" alt="bicicleta tándem para dos personas" class="img-fluid">
                     <h3>Tándem</h3>
                     <p>Para dos personas; perfecta para pasear en pareja.</p>
@@ -152,7 +200,7 @@
         <section>
             <h2>Nuestras rutas</h2>
 
-            <div class="rutas-grid">
+            <div class="rutas-ppal">
                 <article class="rutas-card">
                     <img src="./img/rioparques.jpeg" alt="ruta por parques rio" class="img-fluid">
                     <h3>Río y parques</h3>
