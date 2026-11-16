@@ -34,7 +34,7 @@
                             <a href="./servicios.html" class="btn btn-sm">Nuestros servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./formulario.html" class="btn btn-sm">Reserva con nosotros</a>
+                            <a href="./index.html" class="btn btn-sm">Volver a inicio</a>
                         </li>
                         <li class="nav-item">
                             <a href="#encuentranos" class="btn btn-sm">Encuéntranos</a>
@@ -150,8 +150,9 @@
         const fecha=document.querySelector('#date');
         const hoy = new Date();
         hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
-        fecha.min = hoy.toISOString().slice (0,10);
+        fecha.min = hoy.toISOString().slice (0,10); 
     </script>
+<!--Este script evita que se seleccione una fecha anterior al día actual.-->
 
     <script>
         const nombre= document.querySelector('#nombre');
@@ -162,6 +163,15 @@
                 ? 'Ingrese un nombre de al menos 2 caracteres.'
                 : ''
             );
+        });
+    </script>
+
+    <script>
+        const formulario = document.querySelector('.formulario-reserva');
+
+        formulario.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            alert('Tu formulario es válido! La reserva está lista para enviarse.');
         });
     </script>
 </body>
