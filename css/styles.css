@@ -69,6 +69,7 @@ img {
     font-weight: 700px;
     background-color: var(--naranja-pedal);
     text-transform: uppercase;
+    font-weight: bold;
     font-size: 0.6rem;
     border-radius: 1.5rem;
     position:relative;
@@ -116,7 +117,7 @@ img {
     font-weight: bold;
     transform: translateY(-80%);
     transform: translateX(-20%);
-    color: var(--crema);
+    color: var(--azul-noche);
 }
 
 #carousel .hero-contenido a:hover {
@@ -130,9 +131,10 @@ img {
     width: auto;
     transform: translateY(-80%);
     transform: translateX(-20%);
-    color: var(--azul-noche);
+    color: var(--crema);
+    text-shadow: 0 0 0.3rem var(--crema);
     font-weight: bold;
-    background-color: var(--crema);
+    background-color: var(--verde-ruta);
     transition: 1s;
     border-radius: 999px;
 }
@@ -228,8 +230,8 @@ a {
     transition: 1s;
 }
 
-a:hover {
-    color: var(--crema) !important; /*Si no se ponía el important, entonces seguía aplicándose la regla de que los h tengan color azul noche*/
+header a:hover {
+    color: var(--crema) !important;
     border-radius: 5rem;
     transition: 1s;
     text-shadow: 0 0.1rem 0.3rem var(--crema);
