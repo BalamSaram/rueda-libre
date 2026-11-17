@@ -24,7 +24,7 @@ La página principal usa Tailwind CSS para el bloque de reserva que aparece desp
 Esta implementación cambiia el ancho de la ventana o usa las herramientas de desarrollador del navegador para probar los prefijos 'sm:', 'md:' y 'lg:'.
 
 ## Enlace del sitio:
-
+https://balamsaram.github.io/rueda-libre/
 
 ## Hecho por: 
 Nicolle Duran
