@@ -19,17 +19,12 @@ Algunos features particulares como las alertas, se activa al presionar enviar fo
 - Los botones como "beneficios", "Reserva tu bici" o "encuéntranos" conducen a diferentes funciones como ventana modal, pantalla de formulario y footer con ubicación respectivamente. 
 
 ## Tailwind CSS
-La página principal (`index.html`) usa Tailwind CSS para el bloque de reserva que aparece después del catálogo de rutas. El resto del sitio conserva Bootstrap para no afectar el carrusel, el menú y las ventanas modales existentes.
+La página principal usa Tailwind CSS para el bloque de reserva que aparece después del catálogo de rutas. El resto del sitio conserva Bootstrap para no afectar el carrusel, el menú y las ventanas modales existentes.
 
-1. Abre `index.html` en un navegador con conexión a internet; Tailwind se carga desde su CDN.
-2. Busca `reserva-tailwind` en el HTML para ver el bloque y sus clases utilitarias. No usa estilos en línea.
-3. Cambia el ancho de la ventana o usa las herramientas de desarrollador del navegador para probar los prefijos `sm:`, `md:` y `lg:`.
+Esta implementación cambiia el ancho de la ventana o usa las herramientas de desarrollador del navegador para probar los prefijos 'sm:', 'md:' y 'lg:'.
 
-El CDN de navegador es una opción sencilla para este sitio de práctica; para producción, Tailwind recomienda compilar el CSS.
+## Enlace del sitio:
 
-## Sitio publicado
-Enlace: pendiente de publicar. Cuando publiques el sitio, reemplaza esta línea con su URL.
 
 ## Hecho por: 
 Nicolle Duran
-Riwi - 2026
